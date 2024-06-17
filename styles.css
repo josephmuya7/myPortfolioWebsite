@@ -201,6 +201,53 @@ footer {
   width: 100%;
 }
 
+/* Certificates Section */
+.certificates {
+  margin-bottom: 60px;
+  padding: 30px;
+  background-color: rgba(17, 34, 64, 0.3);
+  border-radius: 5px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.certificates:hover {
+  transform: translateY(-5px);
+}
+
+.certificates h2 {
+  color: #ccd6f6;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #64ffda;
+}
+
+.certificates ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.certificates li {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.certificates li i {
+  color: #64ffda;
+  font-size: 1.2rem;
+  margin-right: 10px;
+}
+
+.certificates li a {
+  color: #ccd6f6;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.certificates li a:hover {
+  color: #64ffda;
+}
 /* Additional Styles for About Page */
 .skill {
   background-color: rgba(17, 34, 64, 0.6);
