@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - Joseph Muya</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
@@ -15,12 +15,26 @@
     <nav class="main-nav">
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><button onclick="location.href='about.html'">About</button></li>
-            <li><button onclick="location.href='contact.html'">Contact</button></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="certificates.html">Certificates</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
 
     <main>
+        <section class="contact-form">
+            <h2>Get In Touch</h2>
+            <form action="https://formsubmit.co/joemuya75@gmail.com" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <input type="text" name="subject" placeholder="Subject" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </section>
+
         <section class="contact-info">
             <h2>Contact Information</h2>
             <ul>
@@ -28,15 +42,6 @@
                 <li><i class="fas fa-envelope"></i> joemuya75@gmail.com</li>
                 <li><i class="fas fa-map-marker-alt"></i> Nyeri, Kenya</li>
             </ul>
-        </section>
-
-        <section class="contact-form">
-            <h2>Get In Touch</h2>
-                <p>
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLScZis-W4j1CwusRPek2YMioJ57_doAuNnkll-DoIGB9FvKocA/viewform?usp=sf_link" target="_blank" rel="noopener">Click here to contact me via Google Forms
-
-                    </a>
-                </p>
         </section>
 
         <section class="social-links">
@@ -47,7 +52,7 @@
     </main>
 
     <footer>
-        <p>&copy; Joseph Muya 2024</p>
+        <p>Copyright &copy; Joseph Muya 2024</p>
     </footer>
 </body>
 </html>
