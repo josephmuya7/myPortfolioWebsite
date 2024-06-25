@@ -1,4 +1,6 @@
 function setUpEvents() {
+    document.addEventListener('DOMContentLoaded', (event) => {
+        console.log("DOM fully loaded and parsed");
 
         // Smooth scrolling for navigation links
         document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
@@ -63,6 +65,7 @@ function setUpEvents() {
         }
     });
 }
+
 
 window.onload = function() {
     console.log("Window loaded");
