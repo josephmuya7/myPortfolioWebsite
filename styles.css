@@ -314,24 +314,25 @@ footer {
     cursor: pointer;
 }
 
+.side-panel.open {
+  left: 0;
+}
+
 /* Responsive Design */
 @media screen and (max-width: 768px) {
     body {
         flex-direction: column;
     }
 
-    .side-panel {
-        width: 100%;
-        height: auto;
-        position: fixed;
-        top: 0;
-        left: -100%;
-        padding: 20px 0;
-    }
+    .mobile-nav-toggle {
+      display: block;
+  }
 
-    .side-panel.open {
-        left: 0;
-    }
+  .side-panel {
+      position: fixed;
+      left: -100%;
+      transition: left 0.3s ease-in-out;
+  }
 
     main {
         margin-left: 0;
@@ -348,9 +349,6 @@ footer {
         left: 0;
     }
 
-    .mobile-nav-toggle {
-        display: block;
-    }
 }
 
 .typing-container {
@@ -370,3 +368,4 @@ footer {
 .fade-effect {
   animation: fadeInOut 2s ease-in-out infinite;
 }
+
