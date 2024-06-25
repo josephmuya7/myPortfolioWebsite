@@ -1,7 +1,53 @@
 function setUpEvents()
 {
 
-           function validateForm(event) {
+    document.addEventListener('DOMContentLoaded', (event) => {
+        // Popup functionality
+        function showPopup() {
+            const popupContainer = document.getElementById('popup-container');
+            popupContainer.textContent = "I'm a computer science enthusiast/developer";
+            popupContainer.style.opacity = '1';
+            
+            setTimeout(() => {
+                popupContainer.style.opacity = '0';
+            }, 3000);
+    
+            setTimeout(showPopup, 7000);
+        }
+    
+        showPopup();
+    
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+    
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    
+        // Animate skill bars
+        function animateSkillBars() {
+            const skillBars = document.querySelectorAll('.skill-progress');
+            skillBars.forEach(bar => {
+                const width = bar.getAttribute('data-width');
+                bar.style.width = width;
+            });
+        }
+    
+        // Run animation when skills section is in view
+        const skillsSection = document.getElementById('skills');
+        const observer = new IntersectionObserver((entries) => {
+            if (entries[0].isIntersecting) {
+                animateSkillBars();
+            }
+        });
+    
+        observer.observe(skillsSection);
+    });
+          function validateForm(event) {
         const password = document.getElementById('password').value;
         const passwordConfirm = document.getElementById('password_confirm').value;
         const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[@_#]).{8,}$/;
@@ -29,6 +75,7 @@ function setUpEvents()
           form.reset();
         }
       }
+    
 
 /*
     //primitives 
