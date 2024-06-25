@@ -567,8 +567,17 @@ footer {
 
 .project-item .btn {
   display: inline-block;
-  margin: 0 15px 15px;
+  margin: 5px 10px 15px 0;
 }
+
+@media only screen and (max-width: 600px) {
+  .project-item .btn {
+      display: block;
+      width: calc(100% - 30px);
+      margin: 10px 15px;
+  }
+}
+
 
 /* Media Queries */
 @media only screen and (max-width: 600px) {
