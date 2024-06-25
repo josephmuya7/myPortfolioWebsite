@@ -1,30 +1,4 @@
 function setUpEvents() {
-    document.addEventListener('DOMContentLoaded', (event) => {
-        console.log("DOM fully loaded and parsed");
-
-        // Typing effect
-        const typingElement = document.querySelector('.typing');
-        if (typingElement) {
-            console.log("Typing element found");
-            const words = ['developer', 'designer', 'problem solver'];
-            let wordIndex = 0;
-
-            function typeWord() {
-                const currentWord = words[wordIndex];
-                typingElement.textContent = currentWord;
-                typingElement.classList.add('fade-effect');
-
-                setTimeout(() => {
-                    typingElement.classList.remove('fade-effect');
-                    wordIndex = (wordIndex + 1) % words.length;
-                    setTimeout(typeWord, 500); // Delay before typing next word
-                }, 2000); // Duration of fade effect
-            }
-
-            typeWord();
-        } else {
-            console.error("Typing element not found");
-        }
 
         // Smooth scrolling for navigation links
         document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
