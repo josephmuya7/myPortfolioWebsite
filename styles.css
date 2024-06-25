@@ -352,3 +352,21 @@ footer {
         display: block;
     }
 }
+
+.typing-container {
+  height: 30px; /* Adjust as needed */
+}
+
+.typing {
+  font-weight: bold;
+  color: #64ffda;
+}
+
+@keyframes fadeInOut {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+.fade-effect {
+  animation: fadeInOut 2s ease-in-out infinite;
+}

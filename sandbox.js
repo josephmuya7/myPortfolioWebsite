@@ -1,20 +1,24 @@
 function setUpEvents() {
     document.addEventListener('DOMContentLoaded', (event) => {
-        // Popup functionality
-        function showPopup() {
-            const popupContainer = document.getElementById('popup-container');
-            popupContainer.textContent = "I'm a computer science enthusiast/developer";
-            popupContainer.style.opacity = '1';
-            
+        // Typing effect
+        const words = ['developer', 'designer', 'problem solver'];
+        let wordIndex = 0;
+        const typingElement = document.querySelector('.typing');
+
+        function typeWord() {
+            const currentWord = words[wordIndex];
+            typingElement.textContent = currentWord;
+            typingElement.classList.add('fade-effect');
+
             setTimeout(() => {
-                popupContainer.style.opacity = '0';
-            }, 3000);
-    
-            setTimeout(showPopup, 7000);
+                typingElement.classList.remove('fade-effect');
+                wordIndex = (wordIndex + 1) % words.length;
+                setTimeout(typeWord, 500); // Delay before typing next word
+            }, 2000); // Duration of fade effect
         }
-    
-        showPopup();
-    
+
+        typeWord();
+
         // Smooth scrolling for navigation links
         document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
