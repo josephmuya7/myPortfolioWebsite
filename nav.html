@@ -9,7 +9,16 @@
 </head>
 <body>
     <nav class="page-nav">
-        <a href="index.html" class="btn back-home"><i class="fas fa-home"></i> Back to Home</a>
+        <a href="javascript:void(0);" onclick="goBack()" class="btn back-home"><i class="fas fa-home"></i> Back to Home</a>
     </nav>
+    <script>
+    function goBack() {
+        if (document.referrer.indexOf(window.location.host) !== -1) {
+            history.back();
+        } else {
+            window.location.href = 'index.html';
+        }
+    }
+    </script>
 </body>
 </html>
