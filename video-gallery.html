@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
-    <a href="index.html" class="back-to-portfolio">Back to Portfolio</a>
+    <button onclick="goBack()" class="back-button">Back</button>
     <main>
         <section id="video-gallery" class="gallery">
             <h2>My Video Gallery Video Editing Skills</h2>
@@ -32,5 +32,11 @@
             </div>
         </section>
     </main>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+        </script>
 </body>
 </html>

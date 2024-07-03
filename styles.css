@@ -319,7 +319,7 @@ footer {
     cursor: pointer;
 }
 
-.back-to-portfolio {
+.back-button {
     position: fixed;
     top: 20px;
     left: 20px;
@@ -331,9 +331,10 @@ footer {
     text-decoration: none;
     font-weight: bold;
     transition: all 0.3s ease-in-out;
+    cursor: pointer;
 }
 
-.back-to-portfolio:hover {
+.back-button:hover {
     background-color: var(--heading-color);
     color: var(--bg-color);
     transform: translateY(-3px);
@@ -378,7 +379,7 @@ footer {
         display: block;
     }
 
-    .back-to-portfolio {
+    .back-button {
         top: 10px;
         left: 10px;
         font-size: 14px;
