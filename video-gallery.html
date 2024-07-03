@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div id="nav-placeholder"></div>
     <main>
         <section id="video-gallery" class="gallery">
             <h2>My Video Gallery Video Editing Skills</h2>
@@ -30,5 +31,12 @@
             </div>
         </section>
     </main>
+    <script>
+        fetch('nav.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('nav-placeholder').innerHTML = data;
+            });
+        </script>
 </body>
 </html>

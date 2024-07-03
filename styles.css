@@ -304,6 +304,24 @@ footer {
     left: 250px;
 }
 
+.page-nav {
+    background-color: rgba(10, 25, 47, 0.95);
+    padding: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.back-home {
+    display: inline-block;
+    font-size: 1rem;
+    padding: 10px 20px;
+}
+
+.back-home i {
+    margin-right: 5px;
+}
+
 /* Mobile Navigation Toggle */
 .mobile-nav-toggle {
     display: none;
