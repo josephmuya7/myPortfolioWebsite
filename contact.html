@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
+    <a href="index.html" class="back-to-portfolio">Back to Portfolio</a>
     <main>
-        <div id="nav-placeholder"></div>
         <section id="contact">
             <h2>Get In Touch</h2>
             <form action="https://formsubmit.co/joemuya75@gmail.com" method="POST">
@@ -29,21 +29,5 @@
             </div>
         </section>
     </main>
-    <script>
-        fetch('nav.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('nav-placeholder').innerHTML = data;
-                
-                document.getElementById('back-home').addEventListener('click', function(e) {
-                    e.preventDefault();
-                    if (document.referrer.indexOf(window.location.host) !== -1) {
-                        history.back();
-                    } else {
-                        window.location.href = 'index.html';
-                    }
-                });
-            });
-        </script>
 </body>
 </html>
