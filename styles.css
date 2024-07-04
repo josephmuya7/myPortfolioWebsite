@@ -382,25 +382,7 @@ footer {
     cursor: pointer;
 }
 
-/* Back Button */
-.back-btn {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    background-color: var(--highlight-color);
-    color: var(--bg-color);
-    padding: 10px 15px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    z-index: 1000;
-    transition: all 0.3s ease-in-out;
-}
 
-.back-btn:hover {
-    background-color: var(--heading-color);
-    color: var(--bg-color);
-}
 
 /* Responsive Design */
 @media screen and (max-width: 768px) {
