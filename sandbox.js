@@ -52,20 +52,28 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Run animation when skills section is in view
-    const skillsSection = document.getElementById('skills');
-    if (skillsSection) {
+    // Handle section visibility
+    function handleSectionVisibility() {
+        const sections = document.querySelectorAll('section');
         const observer = new IntersectionObserver((entries) => {
-            if (entries[0].isIntersecting) {
-                animateSkillBars();
-            }
-        });
-    
-        observer.observe(skillsSection);
-    }
-});
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    if (entry.target.id === 'skills') {
+                        animateSkillBars();
+                    }
+                }
+            });
+        }, { threshold: 0.1 });
 
-document.addEventListener('DOMContentLoaded', setUpEvents);
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    }
+
+    // Initialize section visibility handling
+    handleSectionVisibility();
+});
 
 // Ensure all functionality works even if the DOM is already loaded
 if (document.readyState === 'loading') {
@@ -119,26 +127,6 @@ function setUpEvents() {
         });
     });
 
-    // Animate skill bars
-    function animateSkillBars() {
-        const skillBars = document.querySelectorAll('.skill-progress');
-        skillBars.forEach(bar => {
-            const width = bar.getAttribute('data-width');
-            bar.style.width = width;
-        });
-    }
-
-    // Run animation when skills section is in view
-    const skillsSection = document.getElementById('skills');
-    if (skillsSection) {
-        const observer = new IntersectionObserver((entries) => {
-            if (entries[0].isIntersecting) {
-                animateSkillBars();
-            }
-        });
-    
-        observer.observe(skillsSection);
-    }
-
-    // Add any additional event listeners or functionality here
+    // Initialize section visibility handling
+    handleSectionVisibility();
 }
