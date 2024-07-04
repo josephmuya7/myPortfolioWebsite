@@ -7,17 +7,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (mobileNavToggle && sidePanel) {
         console.log("Mobile nav elements found");
-        mobileNavToggle.addEventListener('click', (e) => {
-            e.preventDefault();
-            e.stopPropagation();
+        mobileNavToggle.addEventListener('click', () => {
             console.log("Mobile nav toggle clicked");
             sidePanel.classList.toggle('open');
+            document.body.classList.toggle('nav-open');
         });
 
         // Close side panel when clicking outside
         document.addEventListener('click', (event) => {
             if (!sidePanel.contains(event.target) && !mobileNavToggle.contains(event.target)) {
                 sidePanel.classList.remove('open');
+                document.body.classList.remove('nav-open');
             }
         });
 
@@ -26,6 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
             link.addEventListener('click', () => {
                 if (window.innerWidth <= 768) {
                     sidePanel.classList.remove('open');
+                    document.body.classList.remove('nav-open');
                 }
             });
         });
@@ -91,17 +92,17 @@ function setUpEvents() {
 
     if (mobileNavToggle && sidePanel) {
         console.log("Mobile nav elements found");
-        mobileNavToggle.addEventListener('click', (e) => {
-            e.preventDefault();
-            e.stopPropagation();
+        mobileNavToggle.addEventListener('click', () => {
             console.log("Mobile nav toggle clicked");
             sidePanel.classList.toggle('open');
+            document.body.classList.toggle('nav-open');
         });
 
         // Close side panel when clicking outside
         document.addEventListener('click', (event) => {
             if (!sidePanel.contains(event.target) && !mobileNavToggle.contains(event.target)) {
                 sidePanel.classList.remove('open');
+                document.body.classList.remove('nav-open');
             }
         });
 
@@ -110,6 +111,7 @@ function setUpEvents() {
             link.addEventListener('click', () => {
                 if (window.innerWidth <= 768) {
                     sidePanel.classList.remove('open');
+                    document.body.classList.remove('nav-open');
                 }
             });
         });
@@ -129,4 +131,30 @@ function setUpEvents() {
 
     // Initialize section visibility handling
     handleSectionVisibility();
+}
+
+function handleSectionVisibility() {
+    const sections = document.querySelectorAll('section');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                if (entry.target.id === 'skills') {
+                    animateSkillBars();
+                }
+            }
+        });
+    }, { threshold: 0.1 });
+
+    sections.forEach(section => {
+        observer.observe(section);
+    });
+}
+
+function animateSkillBars() {
+    const skillBars = document.querySelectorAll('.skill-progress');
+    skillBars.forEach(bar => {
+        const width = bar.getAttribute('data-width');
+        bar.style.width = width;
+    });
 }

@@ -1,19 +1,20 @@
-/* General Styles */
 :root {
     --bg-color: #0a192f;
     --text-color: #8892b0;
     --highlight-color: #64ffda;
     --heading-color: #ccd6f6;
+    --secondary-color: #112240;
 }
 
 body {
-    background: linear-gradient(to bottom right, #0a192f, #112240);
+    background: linear-gradient(135deg, var(--bg-color) 0%, var(--secondary-color) 100%);
     color: var(--text-color);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
     display: flex;
+    overflow-x: hidden;
 }
 
 /* Side Panel */
@@ -22,7 +23,10 @@ body {
     height: 100vh;
     position: fixed;
     left: 0;
-    background-color: rgba(10, 25, 47, 0.95);
+    background-color: rgb(17, 34, 64); /* Fallback for browsers that don't support rgba */
+    background-color: rgba(17, 34, 64, 0.95);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -39,6 +43,7 @@ body {
     object-fit: cover;
     margin-bottom: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 3px solid var(--highlight-color);
 }
 
 .social-links {
@@ -74,6 +79,7 @@ nav a {
     display: flex;
     align-items: center;
     transition: color 0.3s;
+    font-size: 1.1rem;
 }
 
 nav a:hover {
@@ -96,12 +102,20 @@ section {
     min-height: 100vh;
     padding: 50px;
     margin-bottom: 50px;
-    background-color: rgba(17, 34, 64, 0.8);
-    border-radius: 10px;
+    background-color: rgb(17, 34, 64); /* Fallback for browsers that don't support rgba */
+    background-color: rgba(17, 34, 64, 0.7);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    border-radius: 20px;
     box-shadow: 0 10px 30px -15px rgba(2,12,27,0.7);
     opacity: 0;
     transform: translateY(20px);
-    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out, box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px -20px rgba(2,12,27,0.7);
 }
 
 section.visible {
@@ -123,8 +137,9 @@ h1, h2, h3, h4 {
 }
 
 #home h1 {
-    font-size: 3rem;
+    font-size: 4rem;
     margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
 }
 
 #home p {
@@ -164,42 +179,26 @@ h1, h2, h3, h4 {
 /* Button Styles */
 .btn {
     display: inline-block;
-    background-color: transparent;
-    color: var(--highlight-color);
+    background: linear-gradient(45deg, var(--highlight-color), #4cffb3);
+    color: var(--bg-color);
     padding: 12px 24px;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 30px;
     transition: all 0.3s ease-in-out;
-    border: 1px solid var(--highlight-color);
+    border: none;
     font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
     margin-top: 20px;
     cursor: pointer;
     position: relative;
     overflow: hidden;
 }
 
-.btn::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 0;
-    height: 0;
-    background-color: rgba(100, 255, 218, 0.2);
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-    transition: width 0.3s ease-out, height 0.3s ease-out;
-}
-
 .btn:hover {
-    background-color: rgba(100, 255, 218, 0.1);
+    background: linear-gradient(45deg, #4cffb3, var(--highlight-color));
     transform: translateY(-3px);
-    box-shadow: 0 10px 20px -15px rgba(2,12,27,0.7);
-}
-
-.btn:hover::after {
-    width: 300px;
-    height: 300px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 /* Skills Section */
@@ -374,20 +373,29 @@ footer {
     top: 20px;
     right: 20px;
     font-size: 24px;
-    background-color: rgba(10, 25, 47, 0.95);
-    color: var(--highlight-color);
-    padding: 10px;
-    border-radius: 5px;
+    background-color: var(--highlight-color);
+    color: var(--bg-color);
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
     z-index: 1001;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-
+.mobile-nav-toggle:hover {
+    background-color: var(--text-color);
+}
 
 /* Responsive Design */
 @media screen and (max-width: 768px) {
     body {
         flex-direction: column;
+    }
+
+    body.nav-open {
+        overflow: hidden;
     }
 
     .side-panel {
