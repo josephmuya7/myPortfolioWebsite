@@ -1,29 +1,23 @@
 document.addEventListener('DOMContentLoaded', () => {
-
     console.log("DOM fully loaded and parsed");
 
     // Mobile navigation toggle
     const mobileNavToggle = document.getElementById('mobile-nav-toggle');
     const sidePanel = document.querySelector('.side-panel');
-    const body = document.body;
 
     if (mobileNavToggle && sidePanel) {
         console.log("Mobile nav elements found");
-        mobileNavToggle.addEventListener('click', (e) => {
-            e.preventDefault();
-            e.stopPropagation();
+        mobileNavToggle.addEventListener('click', () => {
             console.log("Mobile nav toggle clicked");
             sidePanel.classList.toggle('open');
-            body.classList.toggle('nav-open');
-            mobileNavToggle.classList.toggle('open');
+            document.body.classList.toggle('nav-open');
         });
 
         // Close side panel when clicking outside
         document.addEventListener('click', (event) => {
             if (!sidePanel.contains(event.target) && !mobileNavToggle.contains(event.target)) {
                 sidePanel.classList.remove('open');
-                body.classList.remove('nav-open');
-                mobileNavToggle.classList.remove('open');
+                document.body.classList.remove('nav-open');
             }
         });
 
@@ -32,8 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
             link.addEventListener('click', () => {
                 if (window.innerWidth <= 768) {
                     sidePanel.classList.remove('open');
-                    body.classList.remove('nav-open');
-                    mobileNavToggle.classList.remove('open');
+                    document.body.classList.remove('nav-open');
                 }
             });
         });
