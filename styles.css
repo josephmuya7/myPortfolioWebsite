@@ -381,11 +381,26 @@ footer {
     height: 50px;
     z-index: 1001;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .mobile-nav-toggle:hover {
     background-color: var(--text-color);
+}
+
+.mobile-nav-toggle.open {
+    background-color: var(--text-color);
+    transform: rotate(90deg);
+}
+
+.side-panel {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    padding: 20px 0;
+    transition: left 0.3s ease-in-out;
 }
 
 /* Responsive Design */
@@ -396,17 +411,14 @@ footer {
 
     body.nav-open {
         overflow: hidden;
+        margin-left: 100%;
     }
 
     .side-panel {
-        width: 100%;
-        height: 100vh;
-        position: fixed;
-        top: 0;
         left: -100%;
-        padding: 20px 0;
-        transition: left 0.3s ease-in-out;
+        width: 100%;
     }
+
 
     .side-panel.open {
         left: 0;
@@ -416,6 +428,7 @@ footer {
         margin-left: 0;
         width: 100%;
         padding: 20px;
+        transition: margin-left 0.3s ease-in-out;
     }
 
     section {
