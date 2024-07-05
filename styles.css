@@ -23,7 +23,6 @@ body {
     height: 100vh;
     position: fixed;
     left: 0;
-    background-color: rgb(17, 34, 64);
     background-color: rgba(17, 34, 64, 0.95);
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
@@ -102,7 +101,6 @@ section {
     min-height: 100vh;
     padding: 50px;
     margin-bottom: 50px;
-    background-color: rgb(17, 34, 64);
     background-color: rgba(17, 34, 64, 0.7);
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
@@ -228,22 +226,39 @@ h1, h2, h3, h4 {
 }
 
 /* Projects Section */
+#projects {
+    text-align: center;
+}
+
+#projects > p {
+    max-width: 800px;
+    margin: 20px auto;
+}
+
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 30px;
+    margin-top: 40px;
 }
 
 .project-item {
     background-color: rgba(17, 34, 64, 0.6);
-    border-radius: 10px;
-    padding: 20px;
+    border-radius: 15px;
+    padding: 25px;
     transition: all 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
 }
 
 .project-item:hover {
     transform: translateY(-10px);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.project-item h3 {
+    color: var(--highlight-color);
+    margin-bottom: 15px;
 }
 
 .project-video {
@@ -259,8 +274,21 @@ h1, h2, h3, h4 {
     left: 0;
     width: 100%;
     height: 100%;
-    border-radius: 5px;
+    border-radius: 10px;
     object-fit: cover;
+}
+
+.project-item p {
+    flex-grow: 1;
+    margin-top: 15px;
+}
+
+.project-links {
+    margin-top: 40px;
+}
+
+.project-links .btn {
+    margin: 0 10px 10px 0;
 }
 
 /* Certificates Section */
@@ -400,6 +428,12 @@ footer {
 }
 
 /* Responsive Design */
+@media screen and (max-width: 1024px) {
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 @media screen and (max-width: 768px) {
     body {
         flex-direction: column;
@@ -431,26 +465,74 @@ footer {
 
     section {
         padding: 30px;
+        min-height: auto;
     }
 
     footer {
         width: 100%;
         left: 0;
+        position: static;
     }
 
     .mobile-nav-toggle {
         display: block;
     }
 
-    .project-grid {
+    .project-item {
+        padding: 20px;
+    }
+
+    .project-video {
+        padding-top: 75%; /* 4:3 Aspect Ratio for mobile */
+    }
+
+    .project-links .btn {
+        display: block;
+        margin: 10px auto;
+        max-width: 200px;
+    }
+
+    #home h1 {
+        font-size: 3rem;
+    }
+
+    #home p {
+        font-size: 1.2rem;
+    }
+
+    .skill-category {
+        padding: 15px;
+    }
+
+    .certificate-grid,
+    .gallery-grid {
         grid-template-columns: 1fr;
+    }
+
+    #contact form {
+        padding: 0 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    section {
+        padding: 20px;
     }
 
     .project-item {
         padding: 15px;
     }
 
-    .project-video {
-        padding-top: 75%; /* 4:3 Aspect Ratio for mobile */
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    #home h1 {
+        font-size: 2.5rem;
+    }
+
+    #home p {
+        font-size: 1rem;
     }
 }
