@@ -11,16 +11,20 @@
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="icon" type="image/x-icon" href="img/favicon.ico">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <script src="sandbox.js" defer></script>
 </head>
 <body>
-    <header>
+    <div class="side-panel">
+        <img src="img/myPortfoliopic.png" alt="Joseph Muya Profile pic" class="profile-pic">
+        <div class="social-links">
+            <a href="https://web.facebook.com/ZyroGraphics7" target="_blank" rel="noopener" title="Visit Joseph Muya's Facebook profile"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/zyrowinchester7/" target="_blank" rel="noopener" title="Visit Joseph Muya's Instagram profile"><i class="fab fa-instagram"></i></a>
+            <a href="https://github.com/josephmuya7" target="_blank" rel="noopener" title="Visit Joseph Muya's GitHub profile"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/zyro-winchester-37a713307/" target="_blank" rel="noopener" title="Visit Joseph Muya's LinkedIn profile"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.upwork.com/freelancers/~017c524d2e167bc6ec" target="_blank" rel="noopener" title="Visit Joseph Muya's Upwork profile"><i class="fab fa-upwork"></i></a>
+        </div>
         <nav>
-            <div class="logo">
-                <img src="img/myPortfoliopic.png" alt="Joseph Muya Profile pic" class="profile-pic">
-            </div>
-            <ul class="nav-links">
+            <ul>
                 <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
                 <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
                 <li><a href="#resume"><i class="fas fa-file-alt"></i> Resume</a></li>
@@ -31,24 +35,19 @@
                 <li><a href="#videos"><i class="fas fa-video"></i> Videos</a></li>
                 <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
             </ul>
-            <div class="burger">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
-            </div>
         </nav>
-    </header>
+    </div>
+
+    <div id="mobile-nav-toggle" class="mobile-nav-toggle">
+        <i class="fas fa-bars"></i>
+    </div>
 
     <main>
-        <section id="home" class="hero">
-            <div class="hero-content">
-                <h1>Joseph Muya</h1>
-                <p>Web Developer | Graphic Designer</p>
-                <a href="#about" class="cta-button">Learn More</a>
-            </div>
+        <section id="home">
+            <h1>Joseph Muya</h1>
+            <p>Web Developer | Graphic Designer</p>
         </section>
 
-        <!-- Rest of your sections (about, resume, projects, etc.) go here -->
         <section id="about">
             <h2>About Me</h2>
             <p>Hello! I'm Joseph Muya, a versatile creative professional with a passion for visual storytelling and technology. My journey in the digital realm has equipped me with a unique blend of skills that allow me to bring ideas to life across multiple platforms.</p>
@@ -305,32 +304,32 @@
                 </div>
             </div>
         </section>
-        <!-- Make sure to wrap the content of each section in a div with class "section-content" -->
 
-        <section id="contact" class="contact">
-            <div class="section-content">
-                <h2>Get In Touch</h2>
-                <form id="contact-form" action="https://formsubmit.co/joemuya75@gmail.com" method="POST">
-                    <input type="text" name="name" placeholder="Your Name" required>
-                    <input type="email" name="email" placeholder="Your Email" required>
-                    <input type="text" name="subject" placeholder="Subject" required>
-                    <textarea name="message" placeholder="Your Message" required></textarea>
-                    <button type="submit" class="submit-btn">Send Message</button>
-                </form>
-                <div id="form-message" class="form-message"></div>
+        <section id="contact">
+            <h2>Get In Touch</h2>
+            <p>Ready to collaborate or have a question? I'm just a click away! Whether you have a project in mind, want to discuss potential opportunities, or simply wish to connect, I'm excited to hear from you. Let's start a conversation and explore how we can work together.</p>
+            <form action="https://formsubmit.co/joemuya75@gmail.com" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <input type="text" name="subject" placeholder="Subject" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+            <div class="contact-info">
+                <h3>Contact Information</h3>
+                <ul>
+                    <li><i class="fas fa-phone"></i> +254705730780</li>
+                    <li><i class="fas fa-envelope"></i> joemuya75@gmail.com</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Nyeri, Kenya</li>
+                </ul>
             </div>
         </section>
+        
+
     </main>
 
     <footer>
-        <div class="social-links">
-            <a href="https://web.facebook.com/ZyroGraphics7" target="_blank" rel="noopener" title="Visit Joseph Muya's Facebook profile"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://x.com/ZyroGraphics" target="_blank" rel="noopener" title="Visit Joseph Muya's X twitter profile"><i class="fa-brands fa-x-twitter"></i></a>
-            <a href="https://github.com/josephmuya7" target="_blank" rel="noopener" title="Visit Joseph Muya's GitHub profile"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/zyro-winchester-37a713307/" target="_blank" rel="noopener" title="Visit Joseph Muya's LinkedIn profile"><i class="fab fa-linkedin-in"></i></a>
-            <a href="https://www.upwork.com/freelancers/~017c524d2e167bc6ec" target="_blank" rel="noopener" title="Visit Joseph Muya's Upwork profile"><i class="fab fa-upwork"></i></a>
-        </div>
-        <p>&copy; 2024 Joseph Muya. All rights reserved.</p>
+        <p>Copyright &copy; Joseph Muya 2024</p>
     </footer>
 </body>
 </html>
