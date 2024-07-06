@@ -11,20 +11,16 @@
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <script src="sandbox.js" defer></script>
 </head>
 <body>
-    <div class="side-panel">
-        <img src="img/myPortfoliopic.png" alt="Joseph Muya Profile pic" class="profile-pic">
-        <div class="social-links">
-            <a href="https://web.facebook.com/ZyroGraphics7" target="_blank" rel="noopener" title="Visit Joseph Muya's Facebook profile"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://www.instagram.com/zyrowinchester7/" target="_blank" rel="noopener" title="Visit Joseph Muya's Instagram profile"><i class="fab fa-instagram"></i></a>
-            <a href="https://github.com/josephmuya7" target="_blank" rel="noopener" title="Visit Joseph Muya's GitHub profile"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/zyro-winchester-37a713307/" target="_blank" rel="noopener" title="Visit Joseph Muya's LinkedIn profile"><i class="fab fa-linkedin-in"></i></a>
-            <a href="https://www.upwork.com/freelancers/~017c524d2e167bc6ec" target="_blank" rel="noopener" title="Visit Joseph Muya's Upwork profile"><i class="fab fa-upwork"></i></a>
-        </div>
+    <header>
         <nav>
-            <ul>
+            <div class="logo">
+                <img src="img/myPortfoliopic.png" alt="Joseph Muya Profile pic" class="profile-pic">
+            </div>
+            <ul class="nav-links">
                 <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
                 <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
                 <li><a href="#resume"><i class="fas fa-file-alt"></i> Resume</a></li>
@@ -35,301 +31,50 @@
                 <li><a href="#videos"><i class="fas fa-video"></i> Videos</a></li>
                 <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
             </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
         </nav>
-    </div>
-
-    <div id="mobile-nav-toggle" class="mobile-nav-toggle">
-        <i class="fas fa-bars"></i>
-    </div>
+    </header>
 
     <main>
-        <section id="home">
-            <h1>Joseph Muya</h1>
-            <p>Web Developer | Graphic Designer</p>
-        </section>
-
-        <section id="about">
-            <h2>About Me</h2>
-            <p>Hello! I'm Joseph Muya, a versatile creative professional with a passion for visual storytelling and technology. My journey in the digital realm has equipped me with a unique blend of skills that allow me to bring ideas to life across multiple platforms.</p>
-        
-            <div class="skills-overview">
-                <div class="skill-category">
-                    <h3><i class="fas fa-paint-brush"></i> Graphic Design</h3>
-                    <p>As an Adobe Photoshop enthusiast, I transform concepts into captivating visuals that speak volumes. From eye-catching social media graphics to stunning digital illustrations, I craft designs that leave a lasting impression.</p>
-                </div>
-        
-                <div class="skill-category">
-                    <h3><i class="fas fa-code"></i> Web Development</h3>
-                    <p>Armed with a foundation in HTML, CSS, and JavaScript, I'm on an exciting journey to master the art of web development. My projects showcase my growing ability to create responsive and visually appealing websites that engage users.</p>
-                </div>
-        
-                <div class="skill-category">
-                    <h3><i class="fas fa-java"></i> Java Programming</h3>
-                    <p>My experience with Java allows me to approach problems with a programmer's mindset. I'm constantly exploring ways to leverage this powerful language to create efficient and scalable solutions.</p>
-                </div>
-        
-                <div class="skill-category">
-                    <h3><i class="fas fa-video"></i> Video Editing</h3>
-                    <p>Using CapCut and Clipchamp, I bring stories to life through dynamic video content. From quick, engaging social media clips to longer-form narratives, I edit with precision to captivate audiences and convey messages effectively.</p>
-                </div>
-            </div>
-        
-            <p>I'm driven by the desire to continuously learn and evolve in these rapidly changing fields. My goal is to combine these diverse skills to create comprehensive digital experiences that are not only visually stunning but also functionally robust.</p>
-        
-            <p>Whether it's designing a brand identity, developing a responsive website, or editing a compelling video, I approach each project with creativity, technical know-how, and a commitment to excellence.</p>
-        
-            <p>Let's collaborate and bring your digital vision to life!</p>
-        </section>
-
-        <section id="resume">
-            <h2>Resume</h2>
-            <a href="cv/Joseph Muya Wanja CV.pdf" download class="btn">Download CV</a>
-            <a href="cv/Joseph Muya Resume.pdf" download class="btn">Download Resume</a>
-        </section>
-
-        <section id="projects">
-            <h2>Biometric Student Attendance System</h2>
-            <p>A sophisticated system developed to automate student attendance using fingerprint recognition.</p>
-            <p><strong>Technologies used:</strong> Java Swing, XAMPP MySQL Database, ZK4500 optical fingerprint device</p>
-            
-            <div class="project-grid">
-                <div class="project-item">
-                    <h3>1. Database Structure</h3>
-                    <div class="project-video">
-                        <video controls>
-                            <source src="video/database show.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-                    <p>Overview of the MySQL database structure, showcasing tables and relationships.</p>
-                </div>
-                
-                <div class="project-item">
-                    <h3>2. Admin Dashboard</h3>
-                    <div class="project-video">
-                        <video controls>
-                            <source src="video/bsas admin dashboard preview.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-                    <p>Demonstration of the admin interface for managing system settings and users.</p>
-                </div>
-                
-                <div class="project-item">
-                    <h3>3. Lecturer Enrollment</h3>
-                    <div class="project-video">
-                        <video controls>
-                            <source src="video/lecturer enrollment.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-                    <p>Process of enrolling new lecturers and managing their information.</p>
-                </div>
-                
-                <div class="project-item">
-                    <h3>4. Student Enrollment</h3>
-                    <div class="project-video">
-                        <video controls>
-                            <source src="video/student enrollment.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-                    <p>Demonstration of student registration and fingerprint enrollment.</p>
-                </div>
-
-            
-            <div class="project-links">
-                <a href="https://github.com/josephmuya7/ZK4500-Biometric-Student-Attendance-System/tree/main/src" target="_blank" class="btn" rel="noopener noreferrer" title="Src code">View on GitHub</a>
-                <a href="https://github.com/josephmuya7/ZK4500-Biometric-Student-Attendance-System/blob/main/README.md" target="_blank" class="btn" rel="noopener" title="ReadMe">Setup Instructions</a>
-                <a href="https://github.com/josephmuya7/ZK4500-Biometric-Student-Attendance-System/blob/main/asas.sql" target="_blank" class="btn" rel="noopener" title="SQl">View SQL File</a>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>Joseph Muya</h1>
+                <p>Web Developer | Graphic Designer</p>
+                <a href="#about" class="cta-button">Learn More</a>
             </div>
         </section>
 
-        <section id="skills">
-            <h2>My Skills</h2>
-            <div class="skill-item">
-                <h3>Java</h3>
-                <div class="skill-bar">
-                    <div class="skill-progress" data-width="85%">85%</div>
-                </div>
-            </div>
-            <div class="skill-item">
-                <h3>HTML</h3>
-                <div class="skill-bar">
-                    <div class="skill-progress" data-width="90%">90%</div>
-                </div>
-            </div>
-            <div class="skill-item">
-                <h3>CSS</h3>
-                <div class="skill-bar">
-                    <div class="skill-progress" data-width="80%">80%</div>
-                </div>
-            </div>
-            <div class="skill-item">
-                <h3>JavaScript</h3>
-                <div class="skill-bar">
-                    <div class="skill-progress" data-width="60%">60%</div>
-                </div>
-            </div>
-            <div class="skill-item">
-                <h3>Microsoft Office Word</h3>
-                <div class="skill-bar">
-                    <div class="skill-progress" data-width="100%">100%</div>
-                </div>
-            </div>
-            <div class="skill-item">
-                <h3>Microsoft Office Excel</h3>
-                <div class="skill-bar">
-                    <div class="skill-progress" data-width="97%">97%</div>
-                </div>
-            </div>
-            <div class="skill-item">
-                <h3>Adobe Photoshop Image Editing</h3>
-                <div class="skill-bar">
-                    <div class="skill-progress" data-width="90%">90%</div>
-                </div>
-            </div>
-            <div class="skill-item">
-                <h3>Clipchamp and Capcut Video Editing</h3>
-                <div class="skill-bar">
-                    <div class="skill-progress" data-width="90%">90%</div>
-                </div>
-            </div>
-        </section>
+        <!-- Rest of your sections (about, resume, projects, etc.) go here -->
+        <!-- Make sure to wrap the content of each section in a div with class "section-content" -->
 
-        <section id="certificates">
-            <h2>My Certificates</h2>
-            <p>Embark on a journey through my professional growth! Discover the array of certificates I've earned, showcasing my dedication to continuous learning and skill development. From web technologies to specialized courses, each certificate represents a milestone in my career.</p>
-            <div class="certificate-grid">
-                <!-- Add your certificate items here -->
-                <div class="certificate-item">
-                    <div class="certificate-image">
-                        <img src="img/html cert.png" alt="HTML Certificate" loading="lazy">
-                        <div class="certificate-overlay">
-                            <a href="https://simpli-web.app.link/e/mB38AAt2sKb"  target="_blank" class="btn" rel="noopener" title="Visit HTML Certificate">View Certificate</a>
-                        </div>
-                    </div>
-                    <h3>HTML Certificate</h3>
-                </div>
-                <div class="certificate-item">
-                    <div class="certificate-image">
-                        <img src="img/javascript cert.png" alt="JavaScript Certificate" loading="lazy">
-                        <div class="certificate-overlay">
-                            <a href="https://simpli-web.app.link/e/2e17XT7muKb" target="_blank" class="btn" rel="noopener" title="Visit Javascript Certificate">View Certificate</a>
-                        </div>
-                    </div>
-                    <h3>JavaScript Certificate</h3>
-                </div>
-                <div class="certificate-item">
-                    <div class="certificate-image">
-                        <img src="img/typing cert.png" alt="Typing Certificate" loading="lazy">
-                        <div class="certificate-overlay">
-                            <a href="https://www.ratatype.com/C7090455EN" target="_blank" class="btn" rel="noopener" title="Visit Typing Certificate">View Certificate</a>
-                        </div>
-                    </div>
-                    <h3>Typing Certificate</h3>
-                </div>
-                <div class="certificate-item">
-                    <div class="certificate-image">
-                        <img src="img/javascript cisco cert.png" alt="Javascript Cisco  Certificate" loading="lazy">
-                        <div class="certificate-overlay">
-                            <a href="https://www.credly.com/badges/2779c93f-05d5-412b-a370-5cc3120d02b0/public_url" target="_blank" class="btn" rel="noopener" title="Visit Javascript Essentials Certificate">View Certificate</a>
-                        </div>
-                    </div>
-                    <h3>Javascript Essentials Cisco Certificate</h3>
-                </div>
-            </div>
-            <div class="certificate-item">
-                <div class="certificate-image">
-                    <img src="img/cisco cyber cecurity cert.png" alt="Cisco Cyber Security Certificate" loading="lazy">
-                    <div class="certificate-overlay">
-                        <a href="https://www.credly.com/badges/00354c1e-5004-4fb7-b17e-557a6c1864c6/public_url" target="_blank" class="btn" rel="noopener" title="Visit Cisco Intro to Cyber Security Certificate">View Certificate</a>
-                    </div>
-                </div>
-                <h3>Cisco Introduction to Cyber Security Certificate</h3>
-            </div>
-        </div>
-        <div class="certificate-item">
-            <div class="certificate-image">
-                <img src="img/ChatGPT cert.png" alt="ChatGPT for Marketing Cert" loading="lazy">
-                <div class="certificate-overlay">
-                    <a href="cv/Joseph Muya Wanja ChatGPT for marketing certificate.pdf" download class="btn">Download Certificate</a>
-                </div>
-            </div>
-            <h3>ChatGPT for marketing Certificate</h3>
-        </div>
+        <section id="contact" class="contact">
+            <div class="section-content">
+                <h2>Get In Touch</h2>
+                <form id="contact-form" action="https://formsubmit.co/joemuya75@gmail.com" method="POST">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <input type="text" name="subject" placeholder="Subject" required>
+                    <textarea name="message" placeholder="Your Message" required></textarea>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+                <div id="form-message" class="form-message"></div>
             </div>
         </section>
-
-        <section id="images">
-            <h2>My Photoshop Gallery</h2>
-            <p>Step into a world of visual creativity! Explore my collection of stunning images showcasing my Photoshop skills. From mind-bending manipulations to eye-catching designs, this gallery is a testament to my passion for visual artistry.</p>
-            <div class="gallery-grid">
-                <!-- Add your image gallery items here -->
-                <div class="gallery-item">
-                    <img src="img/Old West Wanted Posters 7.png" alt="Old West Poster" loading="lazy">
-                </div>
-                <div class="gallery-item">
-                    <img src="img/Haaland.png" alt="Haaland Robot Flyer" loading="lazy">
-                </div>
-                <div class="gallery-item">
-                    <img src="img/dripping effect.png" alt="Ronaldo Dripping" loading="lazy">
-                </div>
-                
-                <div class="gallery-item">
-                    <img src="img/ronaldo flyer.png" alt="Ronaldo Flyer" loading="lazy">
-                </div>
-            </div>
-        </section>
-        
-        <section id="videos">
-            <h2>My Video Editing Gallery</h2>
-            <p>Lights, camera, action! Dive into my video gallery and witness the magic of motion. Experience my video editing prowess through a collection of captivating clips, each telling its own unique story. Get ready to be entertained and inspired!</p>
-            <div class="gallery-grid">
-                <!-- Add your video gallery items here -->
-                <div class="gallery-item">
-                    <a href="https://www.mediafire.com/file/wwbdetpdxvpnojd/Ronaldo_2014_edit.mp4/file" target="_blank" rel="noopener noreferrer">
-                        <img src="img/roro1.png" alt="Ronaldo 2014 edit" loading="lazy">
-                    </a>
-                </div>
-                <div class="gallery-item">
-                    <a href="https://www.mediafire.com/file/2dxy4oc5wn8472s/Ronaldo_Real_Madrid_glory_days.mp4/file" target="_blank" rel="noopener noreferrer">
-                        <img src="img/roro2.png" alt="Ronaldo Real Madrid glory days" loading="lazy">
-                    </a>
-                </div>
-                <div class="gallery-item">
-                    <a href="https://www.mediafire.com/file/2m0i7fxwv2quq64/Ronaldo_Top_Tier_Goals.mp4/file" target="_blank" rel="noopener noreferrer">
-                        <img src="img/roro3.png" alt="Ronaldo Real Madrid glory days" loading="lazy">
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact">
-            <h2>Get In Touch</h2>
-            <p>Ready to collaborate or have a question? I'm just a click away! Whether you have a project in mind, want to discuss potential opportunities, or simply wish to connect, I'm excited to hear from you. Let's start a conversation and explore how we can work together.</p>
-            <form action="https://formsubmit.co/joemuya75@gmail.com" method="POST">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <input type="text" name="subject" placeholder="Subject" required>
-                <textarea name="message" placeholder="Your Message" required></textarea>
-                <button type="submit" class="btn">Send Message</button>
-            </form>
-            <div class="contact-info">
-                <h3>Contact Information</h3>
-                <ul>
-                    <li><i class="fas fa-phone"></i> +254705730780</li>
-                    <li><i class="fas fa-envelope"></i> joemuya75@gmail.com</li>
-                    <li><i class="fas fa-map-marker-alt"></i> Nyeri, Kenya</li>
-                </ul>
-            </div>
-        </section>
-        
-
     </main>
 
     <footer>
-        <p>Copyright &copy; Joseph Muya 2024</p>
+        <div class="social-links">
+            <a href="https://web.facebook.com/ZyroGraphics7" target="_blank" rel="noopener" title="Visit Joseph Muya's Facebook profile"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://x.com/ZyroGraphics" target="_blank" rel="noopener" title="Visit Joseph Muya's X twitter profile"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://github.com/josephmuya7" target="_blank" rel="noopener" title="Visit Joseph Muya's GitHub profile"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/zyro-winchester-37a713307/" target="_blank" rel="noopener" title="Visit Joseph Muya's LinkedIn profile"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.upwork.com/freelancers/~017c524d2e167bc6ec" target="_blank" rel="noopener" title="Visit Joseph Muya's Upwork profile"><i class="fab fa-upwork"></i></a>
+        </div>
+        <p>&copy; 2024 Joseph Muya. All rights reserved.</p>
     </footer>
 </body>
 </html>
