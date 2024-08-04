@@ -365,17 +365,6 @@ h2 {
     transform: scale(1.1);
 }
 
-.gallery-item-vid vid {
-    background-color: rgba(26, 26, 46, 0.8);
-    border-radius: 10px;
-    padding: 1rem;
-}
-
-.gallery-item-vid video {
-    width: 100%;
-    border-radius: 5px;
-}
-
 #contact form {
     display: grid;
     gap: 1rem;
