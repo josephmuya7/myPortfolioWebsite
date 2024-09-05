@@ -314,57 +314,6 @@ h2 {
     text-align: center;
 }
 
-.gallery-tabs {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 2rem;
-}
-
-.tab-btn {
-    background-color: transparent;
-    border: none;
-    color: #ecf0f1;
-    font-size: 1.2rem;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-    transition: color 0.3s ease;
-}
-
-.tab-btn.active {
-    color: #4a9ff5;
-    border-bottom: 2px solid #4a9ff5;
-}
-
-.gallery-content {
-    display: block;
-}
-
-.gallery-content.hidden {
-    display: none;
-}
-
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
-}
-
-.gallery-item {
-    position: relative;
-    overflow: hidden;
-    border-radius: 10px;
-}
-
-.gallery-item img {
-    width: 100%;
-    height: auto;
-    transition: transform 0.3s ease;
-}
-
-.gallery-item:hover img {
-    transform: scale(1.1);
-}
-
 .contact-info {
     background-color: rgba(26, 26, 46, 0.6);
     border-radius: 10px;

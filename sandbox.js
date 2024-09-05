@@ -87,7 +87,7 @@ const observer = new IntersectionObserver((entries, observer) => {
 
 observer.observe(skillsSection);
 
-// Gallery tab switching
+/*// Gallery tab switching
 const galleryTabs = document.querySelectorAll('.tab-btn');
 const galleryContents = document.querySelectorAll('.gallery-content');
 
@@ -106,6 +106,8 @@ galleryTabs.forEach(tab => {
         });
     });
 });
+*/
+
 /*
 // Form submission handling
 const form = document.querySelector('#contact-form');
