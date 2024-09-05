@@ -243,20 +243,39 @@ h2 {
     background-color: rgba(26, 26, 46, 0.6);
     border-radius: 10px;
     padding: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.skill-item h3 {
+    margin-bottom: 0.5rem;
+    color: #4a9ff5;
 }
 
 .skill-bar {
     background-color: rgba(74, 159, 245, 0.2);
     border-radius: 5px;
     overflow: hidden;
-    height: 10px;
-    margin-top: 0.5rem;
+    height: 25px; /* Increased from 10px */
+    position: relative;
 }
 
 .skill-progress {
     background-color: #4a9ff5;
     height: 100%;
     transition: width 1s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 10px;
+    font-weight: bold;
+    color: #ecf0f1;
+}
+
+.skill-progress::after {
+    content: attr(data-width);
+    position: absolute;
+    right: 10px;
+    color: #ecf0f1;
 }
 
 .certificate-grid {
