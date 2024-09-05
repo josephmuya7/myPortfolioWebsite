@@ -271,12 +271,6 @@ h2 {
     color: #ecf0f1;
 }
 
-.skill-progress::after {
-    content: attr(data-width);
-    position: absolute;
-    right: 10px;
-    color: #ecf0f1;
-}
 
 .certificate-grid {
     display: grid;
