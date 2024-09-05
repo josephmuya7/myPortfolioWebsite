@@ -365,27 +365,6 @@ h2 {
     transform: scale(1.1);
 }
 
-#contact form {
-    display: grid;
-    gap: 1rem;
-    margin-bottom: 2rem;
-}
-
-#contact input,
-#contact textarea {
-    width: 100%;
-    padding: 0.8rem;
-    border: none;
-    background-color: rgba(26, 26, 46, 0.6);
-    color: #ecf0f1;
-    border-radius: 5px;
-}
-
-#contact textarea {
-    height: 150px;
-    resize: vertical;
-}
-
 .contact-info {
     background-color: rgba(26, 26, 46, 0.6);
     border-radius: 10px;

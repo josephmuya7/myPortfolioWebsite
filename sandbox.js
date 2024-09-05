@@ -106,7 +106,7 @@ galleryTabs.forEach(tab => {
         });
     });
 });
-
+/*
 // Form submission handling
 const form = document.querySelector('#contact-form');
 const formMessage = document.querySelector('#form-message');
@@ -127,6 +127,8 @@ form.addEventListener('submit', (e) => {
         formMessage.textContent = '';
     }, 5000);
 });
+
+*/
 
 // Typing effect for hero section
 const heroTitle = document.querySelector('.hero h1');
