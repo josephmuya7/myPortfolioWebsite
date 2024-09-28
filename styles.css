@@ -200,6 +200,45 @@ h2 {
     background-color: #3a7fc5;
     transform: scale(1.05);
 }
+/* Vital Documents Section */
+#vital-documents {
+    background-color: rgba(26, 26, 46, 0.8);
+    border-radius: 10px;
+    padding: 3rem 2rem;
+    margin: 4rem auto;
+    max-width: 1200px;
+}
+
+.document-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.document-item {
+    background-color: rgba(26, 26, 46, 0.6);
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.document-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(74, 159, 245, 0.2);
+}
+
+.document-item i {
+    font-size: 3rem;
+    color: #4a9ff5;
+    margin-bottom: 1rem;
+}
+
+.document-item h3 {
+    margin-bottom: 1rem;
+    color: #ecf0f1;
+}
 
 .project-item {
     background-color: rgba(26, 26, 46, 0.6);
