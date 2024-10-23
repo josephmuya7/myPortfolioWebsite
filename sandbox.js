@@ -148,3 +148,37 @@ const typeWriter = (text, i = 0) => {
 window.addEventListener('load', () => {
     typeWriter(heroText);
 });
+
+// Theme toggle function
+const themeToggleBtn = document.getElementById('theme-toggle');
+const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+
+if (currentTheme) {
+  document.documentElement.setAttribute('data-theme', currentTheme);
+}
+
+themeToggleBtn.addEventListener('click', function() {
+  let theme = document.documentElement.getAttribute('data-theme');
+  if (theme === 'dark') {
+    document.documentElement.setAttribute('data-theme', 'light');
+    localStorage.setItem('theme', 'light');
+  } else {
+    document.documentElement.setAttribute('data-theme', 'dark');
+    localStorage.setItem('theme', 'dark');
+  }
+});
+
+
+
+// Scroll-triggered animation
+window.addEventListener('scroll', function() {
+    const elements = document.querySelectorAll('.fade-in, .slide-in');
+    elements.forEach(el => {
+      const elementPosition = el.getBoundingClientRect().top;
+      const screenPosition = window.innerHeight / 1.3;
+      if (elementPosition < screenPosition) {
+        el.classList.add('active');
+      }
+    });
+  });
+  

@@ -22,7 +22,8 @@
       {
         "label": "off"
       }
-    ]
+    ],
+    "disown-opener": "off"
   },
   "browserslist": [
     "defaults",

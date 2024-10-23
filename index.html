@@ -1,304 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Joseph Muya - Web Developer and Graphic Designer Portfolio">
     <meta name="author" content="Joseph Muya">
-    <meta name="keywords" content="Web Developer, Graphic Designer, Portfolio, Joseph Muya">
-    <meta name="robots" content="index, follow" />
     <title>Joseph Muya - Portfolio</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <link rel="icon" type="image/x-icon" href="img/MyBrand3.ico">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <script src="sandbox.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header>
         <nav>
             <div class="logo">
-                <img src="img/MyportfolioLogo.png" alt="Joseph Muya Profile pic" class="logo-icon">
+                <img src="img/MyportfolioLogo.png" alt="Joseph Muya Logo" class="logo-icon">
             </div>
             <ul class="nav-links">
                 <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
                 <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
-                <li><a href="#resume"><i class="fas fa-file-alt"></i> Resume</a></li>
                 <li><a href="#projects"><i class="fas fa-project-diagram"></i> Projects</a></li>
                 <li><a href="#skills"><i class="fas fa-cogs"></i> Skills</a></li>
                 <li><a href="#certificates"><i class="fas fa-certificate"></i> Certificates</a></li>
                 <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
             </ul>
-            <div class="burger">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
-            </div>
+            <button id="theme-toggle">Toggle Theme</button>
         </nav>
     </header>
 
     <main>
+        <!-- Hero Section with Parallax Effect -->
         <section id="home" class="hero">
             <div class="hero-content">
-                <h1>Joseph Muya</h1>
-                <p>Graphic Designer| UI/UX Designer</p>
+                <h1 class="fade-in">Joseph Muya</h1>
+                <p class="fade-in">Graphic Designer | UI/UX Designer</p>
                 <a href="#about" class="cta-button">Learn More</a>
             </div>
         </section>
 
-        <section id="about">
+        <!-- About Section with Scroll Animations -->
+        <section id="about" class="fade-in">
             <h2>About Me</h2>
-            <p>Hello! I'm Joseph Muya, a versatile creative professional with a passion for visual storytelling and technology. My journey in the digital realm has equipped me with a unique blend of skills that allow me to bring ideas to life across multiple platforms.</p>
-        
-            <div class="skills-overview">
-                <div class="skill-category">
-                    <h3><i class="fas fa-paint-brush"></i> Graphic Design</h3>
-                    <p>As an Adobe Photoshop enthusiast, I transform concepts into captivating visuals that speak volumes. From eye-catching social media graphics to stunning digital illustrations, I craft designs that leave a lasting impression.</p>
-                </div>
-        
-                <div class="skill-category">
-                    <h3><i class="fa-solid fa-video"></i> Video Editing</h3>
-                    <p>Using CapCut and Clipchamp, I bring stories to life through dynamic video content. From quick, engaging social media clips to longer-form narratives, I edit with precision to captivate audiences and convey messages effectively.</p>
-                </div>
-                <div class="skill-category">
-                    <h3><i class="fas fa-desktop"></i> UI/UX Design</h3>
-                    <p>With a keen eye for aesthetics and user-centric design, I create intuitive and visually appealing interfaces. My approach combines creative flair with user experience best practices to design digital products that are both beautiful and functional.</p>
-                </div>
-        
-                <div class="skill-category">
-                    <h3><i class="fas fa-robot"></i> Artificial Intelligence</h3>
-                    <p>I'm well-versed in the latest AI technologies and their applications in creative and technical fields. From leveraging AI tools for design and development to understanding the implications of AI in user experience, I bring a forward-thinking approach to every project.</p>
-                </div>
-
-            </div>
+            <p>Hello! I'm Joseph Muya, a versatile creative professional with a passion for visual storytelling and technology. I bring ideas to life across multiple platforms with my skills in graphic design, UI/UX, and video editing.</p>
         </section>
 
-        <section id="resume">
-            <h2>Resume</h2>
-            <div class="resume-buttons">
-                <a href="cv/Joseph Muya Resume.pdf" download class="btn">Download Resume</a>
-            </div>
-            <h2>CV</h2>
-            <div class="resume-buttons">
-                <a href="cv/Joseph Muya Wanja CV_2.pdf" download class="btn">Download CV</a>
-            </div>
-            <h2>National ID</h2>
-            <div class="resume-buttons">-
-                <a href="https://www.mediafire.com/file/zildl71yrl6n4b5/scanned_id.pdf/file" download class="btn">Download Scanned National ID</a>
-            </div>
-            <h2>Interim Driving License</h2>
-            <div class="resume-buttons">
-                <a href="https://www.mediafire.com/file/obxb1p5kky90756/IDL-ERPTPDEOL-Interim_Driving_License.pdf/file" download class="btn">Download Interim Driving License</a>
-            </div>
-        </section>
-
-      
-
-        <section id="projects">
+        <!-- Projects Section -->
+        <section id="projects" class="fade-in">
             <h2>Projects</h2>
-            <div class="project-item">
-                <h3>Biometric Student Attendance System</h3>
-                <p>A sophisticated system developed to automate student attendance using fingerprint recognition.</p>
-                <p><strong>Technologies used:</strong> Java Swing, XAMPP MySQL Database, ZK4500 optical fingerprint device</p>
-                
-                <div class="project-grid">
-                    <div class="project-video">
-                        <h4>1. Database Structure</h4>
-                        <video controls>
-                            <source src="video/database show.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                        <p>Overview of the MySQL database structure, showcasing tables and relationships.</p>
-                    </div>
-                    
-                    <div class="project-video">
-                        <h4>2. Admin Dashboard</h4>
-                        <video controls>
-                            <source src="video/bsas admin dashboard preview.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                        <p>Demonstration of the admin interface for managing system settings and users.</p>
-                    </div>
-                    
-                    <div class="project-video">
-                        <h4>3. Lecturer Enrollment</h4>
-                        <video controls>
-                            <source src="video/lecturer enrollment.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                        <p>Process of enrolling new lecturers and managing their information.</p>
-                    </div>
-                    
-                    <div class="project-video">
-                        <h4>4. Student Enrollment</h4>
-                        <video controls>
-                            <source src="video/student enrollment.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                        <p>Demonstration of student registration and fingerprint enrollment.</p>
-                    </div
+            <div class="project-grid">
+                <div class="project-item slide-in">
+                    <h3>Biometric Student Attendance System</h3>
+                    <p>A system that automates student attendance using fingerprint recognition and QR codes.</p>
                 </div>
-
-                <div class="project-links">
-                    <a href="https://github.com/josephmuya7/ZK4500-Biometric-Student-Attendance-System/tree/main/src" target="_blank" class="btn" rel="noopener noreferrer">View on GitHub</a>
-                    <a href="https://github.com/josephmuya7/ZK4500-Biometric-Student-Attendance-System/blob/main/README.md" target="_blank" class="btn" rel="noopener">Setup Instructions</a>
-                    <a href="https://github.com/josephmuya7/ZK4500-Biometric-Student-Attendance-System/blob/main/asas.sql" target="_blank" class="btn" rel="noopener">View SQL File</a>
-                </div>
+                <!-- Add more projects as needed -->
             </div>
         </section>
 
+        <!-- Skills Section with Animated Progress Bars -->
         <section id="skills">
             <h2>My Skills</h2>
             <div class="skills-grid">
-                <div class="skill-item">
+                <div class="skill-item slide-in">
                     <h3>Java</h3>
                     <div class="skill-bar">
-                        <div class="skill-progress" data-width="65%">65%</div>
+                        <div class="skill-progress" data-width="70%"></div>
                     </div>
                 </div>
-                <div class="skill-item">
-                    <h3>HTML</h3>
-                    <div class="skill-bar">
-                        <div class="skill-progress" data-width="70%">70%</div>
-                    </div>
-                </div>
-
-                <div class="skill-item">
-                    <h3>CSS</h3>
-                    <div class="skill-bar">
-                        <div class="skill-progress" data-width="70%">70%</div>
-                    </div>
-                </div>
-
-                <div class="skill-item">
-                    <h3>JavaScript</h3>
-                    <div class="skill-bar">
-                        <div class="skill-progress" data-width="60%">60%</div>
-                    </div>
-                </div>
-
-                <div class="skill-item">
-                    <h3>Microsoft Office</h3>
-                    <div class="skill-bar">
-                        <div class="skill-progress" data-width="100%">100%</div>
-                    </div>
-                </div>
-
-                <div class="skill-item">
-                    <h3>Adobe Photoshop</h3>
-                    <div class="skill-bar">
-                        <div class="skill-progress" data-width="95%">95%</div>
-                    </div>
-                </div>
-
-                <div class="skill-item">
-                    <h3>Video Editing</h3>
-                    <div class="skill-bar">
-                        <div class="skill-progress" data-width="90%">90%</div>
-                    </div>
-                </div>
-
-                <div class="skill-item">
-                    <h3>UI/UX design</h3>
-                    <div class="skill-bar">
-                        <div class="skill-progress" data-width="85%">85%</div>
-                    </div>
-                </div>
-
-                <div class="skill-item">
-                    <h3>Artificial Intelligence</h3>
-                    <div class="skill-bar">
-                        <div class="skill-progress" data-width="95%">95%</div>
-                    </div>
-                </div>
-
-        </div>
+                <!-- Add more skill items as needed -->
+            </div>
         </section>
 
-        <section id="certificates">
-            <h2>My Certificates</h2>
-            <p>Embark on a journey through my professional growth! Discover the array of certificates I've earned, showcasing my dedication to continuous learning and skill development.</p>
+        <!-- Certificates Section -->
+        <section id="certificates" class="fade-in">
+            <h2>Certificates</h2>
             <div class="certificate-grid">
                 <div class="certificate-item">
-                    <div class="certificate-image">
-                        <img src="img/html cert.png" alt="HTML Certificate" loading="lazy">
-                        <div class="certificate-overlay">
-                            <a href="https://simpli-web.app.link/e/mB38AAt2sKb"  target="_blank" class="btn" rel="noopener">View Certificate</a>
-                        </div>
-                    </div>
+                    <img src="img/certificate1.png" alt="Certificate 1">
                     <h3>HTML Certificate</h3>
                 </div>
-                <div class="certificate-item">
-                    <div class="certificate-image">
-                        <img src="img/javascript cert.png" alt="JavaScript Certificate" loading="lazy">
-                        <div class="certificate-overlay">
-                            <a href="https://simpli-web.app.link/e/2e17XT7muKb" target="_blank" class="btn" rel="noopener">View Certificate</a>
-                        </div>
-                    </div>
-                    <h3>JavaScript Certificate</h3>
-                </div>
-                <div class="certificate-item">
-                    <div class="certificate-image">
-                        <img src="img/javascript cisco cert.png" alt="Javascript Cisco Certificate" loading="lazy">
-                        <div class="certificate-overlay">
-                            <a href="https://www.credly.com/badges/2779c93f-05d5-412b-a370-5cc3120d02b0/public_url" target="_blank" class="btn" rel="noopener">View Certificate</a>
-                        </div>
-                    </div>
-                    <h3>Javascript Essentials Cisco Certificate</h3>
-                </div>
-                <div class="certificate-item">
-                    <div class="certificate-image">
-                        <img src="img/cisco cyber cecurity cert.png" alt="Cisco Cyber Security Certificate" loading="lazy">
-                        <div class="certificate-overlay">
-                            <a href="https://www.credly.com/badges/00354c1e-5004-4fb7-b17e-557a6c1864c6/public_url" target="_blank" class="btn" rel="noopener">View Certificate</a>
-                        </div>
-                    </div>
-                    <h3>Cisco Introduction to Cyber Security Certificate</h3>
-                </div>
-                <div class="certificate-item">
-                    <div class="certificate-image">
-                        <img src="img/ef cert.png" alt="EF SET certificate" loading="lazy">
-                        <div class="certificate-overlay">
-                            <a href="https://cert.efset.org/AjiHbh" target="_blank" class="btn" rel="noopener">View Certificate</a>
-                        </div>
-                    </div>
-                    <h3> EF SET English Certification</h3>
-                </div>
-                <div class="certificate-item">
-                    <div class="certificate-image">
-                        <img src="img/good conduct cert.png" alt="Good Conduct certificate" loading="lazy">
-                        <div class="certificate-overlay">
-                            <a href="https://www.mediafire.com/file/l153cbf4wve1kr1/PCC-44S5QEDBW-POLICE_CLEARANCE_CERTIFICATE_WK.pdf/file" target="_blank" class="btn" rel="noopener">View Certificate</a>
-                        </div>
-                    </div>
-                    <h3>Certificate of Good Conduct</h3>
-                </div>
-                <div class="certificate-item">
-                    <div class="certificate-image">
-                        <img src="img/TUKO cert.png" alt="TUKO Copywriting certificate" loading="lazy">
-                        <div class="certificate-overlay">
-                            <a href="https://www.mediafire.com/file/iis844r0fcdp65x/Joseph_Muya_TUKO_Copywriting_certificate.pdf/file" target="_blank" class="btn" rel="noopener">View Certificate</a>
-                        </div>
-                    </div>
-                    <h3>TUKO Copywriting Certificate</h3>
-                </div>
+                <!-- Add more certificates as needed -->
+            </div>
         </section>
 
-        <section id="contact">
+        <!-- Contact Section -->
+        <section id="contact" class="fade-in">
             <h2>Get In Touch</h2>
-            <p>Ready to collaborate or have a question? I'm just a click away! Let's start a conversation and explore how we can work together.</p>
-            <div class="contact-info">
-                <h3>Contact Information</h3>
-                <ul>
-                    <li><i class="fab fa-whatsapp"></i> <a href="https://wa.link/jf3zk5">+254 705 730 780</a></li>
-                    <li><i class="fas fa-envelope"></i> <a href="mailto:joemuya75@gmail.com">joemuya75@gmail.com</a></li>
-                    <li><i class="fas fa-map-marker-alt"></i> Nyeri, Kenya</li>
-                    <li><i class="fas fa-briefcase"></i> <a href="https://josephmuya.my.canva.site/joseph-muya-portfolio" target="_blank" rel="noopener noreferrer">View My Portfolio Works</a></li>
-                    <li><i class="fab fa-facebook"></i> <a href="https://web.facebook.com/ZyroGraphics7" target="_blank" rel="noopener noreferrer">Zyro Graphics</a></li>
-                    <li><i class="fab fa-github"></i> <a href="https://github.com/josephmuya7" target="_blank" rel="noopener noreferrer">josephmuya7</a></li>
-                    <li><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/zyro-winchester-37a713307/" target="_blank" rel="noopener noreferrer">Joseph Wanja</a></li>
-                </ul>
-            </div>
+            <p>Ready to collaborate or have a question? Let's start a conversation and explore how we can work together.</p>
+            <ul class="contact-info">
+                <li><i class="fab fa-whatsapp"></i> <a href="https://wa.link/jf3zk5">+254 705 730 780</a></li>
+                <li><i class="fas fa-envelope"></i> <a href="mailto:joemuya75@gmail.com">joemuya75@gmail.com</a></li>
+                <li><i class="fab fa-github"></i> <a href="https://github.com/josephmuya7" target="_blank">GitHub</a></li>
+            </ul>
         </section>
     </main>
 
